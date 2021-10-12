@@ -44,8 +44,8 @@ def test_thirteen():
 #sum_series :
 
 def test_three_parameters():
-    expected = 123
-    actual = sum_series(10,2,1)
+    expected = 11
+    actual = sum_series(5,2,1)
     assert actual == expected
 
 
@@ -56,6 +56,11 @@ def test_two():
 
 
 def test_three_parameterssss():
-    expected = 55
-    actual = sum_series(10,0,1)
+    expected = 10
+    actual = sum_series(3,4,3)
     assert actual == expected
+
+def test_four():
+    expected = 3
+    actual = sum_series(4)
+    assert actual == expected    

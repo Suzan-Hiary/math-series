@@ -21,10 +21,22 @@ def lucas(n):
     return lucas(n - 1) + lucas(n - 2)
 
 
+
+def myseries(n ,x , y):
+  # a helper function for creating the third case :
+
+    if (n == 0) : 
+        return x
+    if (n == 1) : 
+        return y
+  
+    
+    return myseries(n - 1 , x ,y) + myseries (n - 2 , x ,y)
+
 def sum_series(n, x=0 , y=1):
     if x == 0 and y== 1:
         return Fibonacci(n)
     elif x == 2 and y== 1:
         return lucas(n)
     else :
-        return sum_series(n - 1, x, y) + sum_series(n - 2, x, y)
+       return  myseries(n , x , y)
